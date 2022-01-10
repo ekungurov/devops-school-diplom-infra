@@ -1,4 +1,4 @@
-## Create a Secret based on existing Docker credentials {#registry-secret-existing-credentials}
+## Create a Secret based on existing Docker credentials
 
 A Kubernetes cluster uses the Secret of `kubernetes.io/dockerconfigjson` type to authenticate with
 a container registry to pull a private image.
