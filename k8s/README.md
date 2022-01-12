@@ -19,3 +19,11 @@ Be sure to:
 - base64 encode the docker file and paste that string, unbroken
   as the value for field `data[".dockerconfigjson"]`
 - set `type` to `kubernetes.io/dockerconfigjson`
+
+## NGINX Ingress Controller
+
+To deploy (legacy) service load balancer use the command below:
+
+```shell
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.1.0/deploy/static/provider/aws/deploy.yaml
+```
