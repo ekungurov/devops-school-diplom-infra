@@ -20,6 +20,11 @@ resource "aws_db_parameter_group" "education" {
     name  = "character_set_client"
     value = "utf8"
   }  
+
+  parameter {
+    name  = "sql_mode"
+    value = "NO_ZERO_IN_DATE,NO_ZERO_DATE,NO_ENGINE_SUBSTITUTION"
+  }
 }
 
 resource "aws_db_instance" "education" {
