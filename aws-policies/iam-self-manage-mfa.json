@@ -5,8 +5,7 @@
             "Sid": "AllowListActions",
             "Effect": "Allow",
             "Action": [
-                "iam:ListUsers",
-                "iam:ListVirtualMFADevices"
+                "iam:ListUsers"
             ],
             "Resource": "*"
         },
@@ -14,7 +13,8 @@
             "Sid": "AllowIndividualUserToListOnlyTheirOwnMFA",
             "Effect": "Allow",
             "Action": [
-                "iam:ListMFADevices"
+                "iam:ListMFADevices",
+                "iam:ListVirtualMFADevices"
             ],
             "Resource": [
                 "arn:aws:iam::*:mfa/*",
