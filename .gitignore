@@ -1,5 +1,6 @@
 # Exclude kubernetes secrets
 secret*.yml
+kubeconfig*
 
 # Local .terraform directories
 **/.terraform/*
