@@ -11,7 +11,7 @@ rules:
     verbs: ["get", "list", "create"]
   - apiGroups: ["apps"]
     resources: ["deployments" ,"daemonsets" ,"statefulsets" ,"replicasets"]
-    verbs: ["get", "list", "create"]
+    verbs: ["get", "list", "create", "patch"]
   - apiGroups: [ "batch"]
     resources: ["jobs", "cronjobs"]
     verbs: ["get", "list"]
