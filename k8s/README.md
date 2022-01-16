@@ -32,14 +32,14 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 
 ```shell
 kubectl apply -f https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights/latest/k8s-deployment-manifest-templates/deployment-mode/daemonset/container-insights-monitoring/cloudwatch-namespace.yaml
-
+```
+```shell
 set CLUSTER_NAME=education-eks-lFTgJliq
 set REGION_NAME=eu-central-1
 set FLUENT_BIT_HTTP_PORT=2020
 set FLUENT_BIT_READ_FROM_HEAD=Off
 set FLUENT_BIT_READ_FROM_TAIL=On
 set FLUENT_BIT_HTTP_SERVER=On
-
 kubectl create configmap fluent-bit-cluster-info ^
 --from-literal=cluster.name=%CLUSTER_NAME% ^
 --from-literal=http.server=%FLUENT_BIT_HTTP_SERVER% ^
@@ -47,7 +47,8 @@ kubectl create configmap fluent-bit-cluster-info ^
 --from-literal=read.head=%FLUENT_BIT_READ_FROM_HEAD% ^
 --from-literal=read.tail=%FLUENT_BIT_READ_FROM_TAIL% ^
 --from-literal=logs.region=%REGION_NAME% -n amazon-cloudwatch
-
+```
+```shell
 kubectl apply -f https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights/latest/k8s-deployment-manifest-templates/deployment-mode/daemonset/container-insights-monitoring/fluent-bit/fluent-bit.yaml
 ```
 
