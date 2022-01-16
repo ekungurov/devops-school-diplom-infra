@@ -53,11 +53,11 @@ kubectl apply -f https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch
 
 The above steps create the following resources in the cluster:
 
-A service account named Fluent-Bit in the amazon-cloudwatch namespace. This service account is used to run the Fluent Bit daemonSet. For more information, see (Managing Service Accounts)[https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/] in the Kubernetes Reference.
+A service account named Fluent-Bit in the amazon-cloudwatch namespace. This service account is used to run the Fluent Bit daemonSet. For more information, see [Managing Service Accounts](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/) in the Kubernetes Reference.
 
-A cluster role named Fluent-Bit-role in the amazon-cloudwatch namespace. This cluster role grants get, list, and watch permissions on pod logs to the Fluent-Bit service account. For more information, see (API Overview)[https://kubernetes.io/docs/reference/access-authn-authz/rbac/#api-overview/] in the Kubernetes Reference.
+A cluster role named Fluent-Bit-role in the amazon-cloudwatch namespace. This cluster role grants get, list, and watch permissions on pod logs to the Fluent-Bit service account. For more information, see [API Overview](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#api-overview/) in the Kubernetes Reference.
 
-A ConfigMap named Fluent-Bit-config in the amazon-cloudwatch namespace. This ConfigMap contains the configuration to be used by Fluent Bit. For more information, see (Configure a Pod to Use a ConfigMap)[https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/] in the Kubernetes Tasks documentation.
+A ConfigMap named Fluent-Bit-config in the amazon-cloudwatch namespace. This ConfigMap contains the configuration to be used by Fluent Bit. For more information, see [Configure a Pod to Use a ConfigMap](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) in the Kubernetes Tasks documentation.
 
 If you want to verify your Fluent Bit setup, follow these steps:
 1. Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.
