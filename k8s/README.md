@@ -64,7 +64,7 @@ If you want to verify your Fluent Bit setup, follow these steps:
 1. In the navigation pane, choose Logs.
 1. Make sure that you're in the Region where you deployed Fluent Bit.
 1. Check the list of log groups in the Region. You should see the following:
-  * /aws/containerinsights/Cluster_Name/application
-  * /aws/containerinsights/Cluster_Name/host
-  * /aws/containerinsights/Cluster_Name/dataplane
+    * /aws/containerinsights/Cluster_Name/application
+    * /aws/containerinsights/Cluster_Name/host
+    * /aws/containerinsights/Cluster_Name/dataplane
 1. Navigate to one of these log groups and check the Last Event Time for the log streams. If it is recent relative to when you deployed Fluent Bit, the setup is verified.
