@@ -20,7 +20,7 @@ Be sure to:
   as the value for field `data[".dockerconfigjson"]`
 - set `type` to `kubernetes.io/dockerconfigjson`
 
-## NGINX Ingress Controller
+## Deploy NGINX Ingress Controller
 
 To deploy (legacy) service load balancer use the command below:
 
@@ -28,7 +28,17 @@ To deploy (legacy) service load balancer use the command below:
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.1.0/deploy/static/provider/aws/deploy.yaml
 ```
 
-## To install Fluent Bit to send logs from containers to CloudWatch Logs
+## Deploy the Metrics Server
+
+Deploy the Metrics Server with the following command:
+
+```shell
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+```
+
+## Deploy Fluent Bit
+
+To install Fluent Bit to send logs from containers to CloudWatch Logs:
 
 ```shell
 kubectl apply -f https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights/latest/k8s-deployment-manifest-templates/deployment-mode/daemonset/container-insights-monitoring/cloudwatch-namespace.yaml
