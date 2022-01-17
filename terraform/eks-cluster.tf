@@ -27,7 +27,7 @@ module "eks" {
       name                          = "worker-group-1"
       instance_type                 = "t3.small"
       asg_desired_capacity          = 2
-      asg_max_capacity              = 2
+      asg_max_size                  = 2
       additional_security_group_ids = [aws_security_group.worker_group_mgmt_one.id]
       iam_instance_profile_name     = "eksWorkerNodeRole"
     },
