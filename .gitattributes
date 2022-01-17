@@ -1,0 +1,2 @@
+# Ensure line endings are always Unix-style for known text files
+*.ts text eol=lf
