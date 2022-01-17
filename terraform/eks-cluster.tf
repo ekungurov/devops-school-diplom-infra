@@ -47,14 +47,14 @@ resource "kubernetes_config_map" "aws_auth" {
   data = {
     mapAccounts   = jsonencode([])
     mapRoles      = <<EOT
-- rolearn: "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/eksWorkerNodeRole"
+- rolearn: arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/eksWorkerNodeRole
   username: system:node:{{EC2PrivateDNSName}}
   groups:
   - system:bootstrappers
   - system:nodes
   EOT
     mapUsers      = <<EOT
-- userarn: "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/yk-eks-developer"
+- userarn: arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/yk-eks-developer
   username: eks-release-engineer
   EOT
   }
